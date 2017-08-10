@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libraries;
+namespace ambielecki\DiveCalculator;
 /**
  * Created by PhpStorm.
  * User: Bielecki
@@ -128,7 +128,7 @@ class DiveCalculator
      * @return string
      */
     public function getPressureGroup($depth, $time, $residual_time = null) {
-        $time = $time + $residual_time;
+        $time += $residual_time;
         $table_depths = $this->getTableDepths();
         $depth_key = null;
         foreach ($table_depths as $key => $table_depth) {
